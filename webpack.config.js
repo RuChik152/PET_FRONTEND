@@ -102,5 +102,12 @@ module.exports = {
                 }),
             ]),
         ...(withReport ? new BundleAnalyzerPlugin() : ''),
-    ],
+  ],
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      src: path.resolve(__dirname, 'src'),
+    },
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
+  },
 };
